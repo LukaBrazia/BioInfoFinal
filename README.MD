@@ -1,15 +1,25 @@
 # Bioinformatics Final Project
 
-This project aims to modernize the pipeline described in the paper ["High-throughput transcriptome sequencing and comparative analysis of Escherichia coli and Schizosaccharomyces pombe in respiratory and fermentative growth by Vichi J et al."](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7968713/) with current SOTA methods.
+# Abstract
 
-The paper tries to understand the differences in gene expression and metabolic responses of two distinct organisms, Escherichia coli (a bacterium) and Schizosaccharomyces pombe (a yeast), under conditions of respiratory and fermentative growth. The study utilizes high-throughput transcriptome sequencing to analyze and compare how these organisms adapt their genetic expression profiles to efficiently utilize available resources under different metabolic states. This research provides evolutionary insights into the fundamental biological processes and regulatory mechanisms that govern cellular responses to varying environmental conditions.
+his project aims to modernize the RNA sequencing and comparative analysis pipeline described in the paper ["High-throughput transcriptome sequencing and comparative analysis of Escherichia coli and Schizosaccharomyces pombe in respiratory and fermentative growth"](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7968713/ by Vichi J et al. The original study focused on understanding the differences in gene expression and metabolic responses between Escherichia coli and Schizosaccharomyces pombe under varying growth conditions. Utilizing high-throughput transcriptome sequencing, the research provided insights into the adaptive genetic expression profiles and regulatory mechanisms of these organisms in respiratory versus fermentative states.
 
-The experiment consisted of 12 sampels:
+The project involves 12 samples: three from E. coli with 2% glucose, three from E. coli with 2% glycerol and 0.2% sodium acetate, three from S. pombe with 2% glucose, and three from S. pombe with 2% glycerol and 0.2% sodium acetate. RNA libraries from these samples are used to reprocess and analyze the data with state-of-the-art methods.
+
+The new pipeline employs FASTP for data quality checks and trimming, replacing FASTQC and Trimmomatic used in the original paper. FASTP offers a faster, integrated solution for quality control and adapter trimming. For RNA-Seq read alignment, STAR is used instead of HISAT2 due to its speed and accuracy in handling large datasets and complex analyses. FeatureCount is utilized for gathering counts from the RNA library, providing an efficient alternative to BEDtools.
+
+Differential gene expression analysis is conducted using DESeq2, which offers a user-friendly API and visualization tools, replacing the EdgeR library from the original study. Ortholog identification, crucial for understanding evolutionary relationships, is simplified using Orthovenn3. The final analysis, documented in analysis.ipynb, shows that the modernized pipeline yields more robust and efficient results, identifying more pairs of up/down-regulated genes potentially shared between E. coli and S. pombe. This updated approach promises broader applicability for similar comparative genomics studies.
+
+
+## Original Experiment
+
+The original experiment consisted of 12 sampels:
 - 3 from E. Coli bacteria in a petri dish with 2% glucose
 - 3 from E. Coli bacteria in a petri dish with 2% glycerol and 0.2% sodium acetate
 - 3 from S. Pombe fungi in a petri dish with 2% glucose
 - 3 from S. Pombe fungi in a petri dish with 2% glycerol and 0.2% sodium acetate
 
+E. Coli and S. Pombe are model organizms from different animal kingdoms. The Glucose and Glycerol environments are used to model Fermentative and Respirotary growth environments.
 This project makes use of the RNA libraries produced from these samples.
 
 # Methodology
