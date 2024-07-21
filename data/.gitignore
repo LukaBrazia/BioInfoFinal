@@ -1,0 +1,5 @@
+fixed/*
+base/*.fastq
+trimmed/*.fastq
+out/*.*
+star/*

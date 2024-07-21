@@ -1,0 +1,19 @@
+### /usr/lib/rna-star/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 4   --genomeDir shizo   --genomeFastaFiles shizo.fa      --genomeSAindexNbases 10   --sjdbGTFfile shizo_annot.gtf
+### GstrandBit 32
+versionGenome	2.7.4a
+genomeType	Full
+genomeFastaFiles	shizo.fa 
+genomeSAindexNbases	10
+genomeChrBinNbits	18
+genomeSAsparseD	1
+genomeTransformType	None
+genomeTransformVCF	-
+sjdbOverhang	100
+sjdbFileChrStartEnd	- 
+sjdbGTFfile	shizo_annot.gtf
+sjdbGTFchrPrefix	-
+sjdbGTFfeatureExon	exon
+sjdbGTFtagExonParentTranscript	transcript_id
+sjdbGTFtagExonParentGene	gene_id
+sjdbInsertSave	Basic
+genomeFileSizes	13117451 103798352

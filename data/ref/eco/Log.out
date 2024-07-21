@@ -1,0 +1,76 @@
+STAR version=2.7.10a
+STAR compilation time,server,dir=2022-01-16T16:35:44+00:00 <place not set in Debian package>
+##### Command Line:
+/usr/lib/rna-star/bin/STAR-avx2 --runThreadN 4 --runMode genomeGenerate --genomeDir eco --genomeFastaFiles eco.fa --sjdbGTFfile eco_annot.gtf --genomeSAindexNbases 10
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runThreadN                    4     ~RE-DEFINED
+runMode                       genomeGenerate        ~RE-DEFINED
+genomeDir                     eco     ~RE-DEFINED
+genomeFastaFiles              eco.fa        ~RE-DEFINED
+sjdbGTFfile                   eco_annot.gtf     ~RE-DEFINED
+genomeSAindexNbases           10     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+runThreadN                        4
+genomeDir                         eco
+genomeFastaFiles                  eco.fa   
+genomeSAindexNbases               10
+sjdbGTFfile                       eco_annot.gtf
+
+-------------------------------
+##### Final effective command line:
+/usr/lib/rna-star/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 4   --genomeDir eco   --genomeFastaFiles eco.fa      --genomeSAindexNbases 10   --sjdbGTFfile eco_annot.gtf
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory exists and will be overwritten: eco/
+Jul 21 05:27:55 ... starting to generate Genome files
+eco.fa : chr # 0  "BA000007.3" chrStart: 0
+eco.fa : chr # 1  "AB011548.2" chrStart: 5505024
+eco.fa : chr # 2  "AB011549.2" chrStart: 5767168
+Chromosome sequence lengths: 
+BA000007.3	5498578
+AB011548.2	3306
+AB011549.2	92721
+Genome sequence total length = 5594605
+Genome size with padding = 6029312
+Jul 21 05:27:55 ..... processing annotations GTF
+Processing pGe.sjdbGTFfile=eco_annot.gtf, found:
+		126 transcripts
+		126 exons (non-collapsed)
+		0 collapsed junctions
+Total junctions: 0
+Jul 21 05:27:55 ..... finished GTF processing
+
+Estimated genome size with padding and SJs: total=genome+SJ=207029312 = 6029312 + 201000000
+GstrandBit=32
+Number of SA indices: 11189210
+Jul 21 05:27:55 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 4;   chunks size limit: 29837888 bytes
+Jul 21 05:27:55 ... sorting Suffix Array chunks and saving them to disk...
+Writing 29667832 bytes into eco//SA_0 ; empty space on disk = 615517507584 bytes ... done
+Writing 29375192 bytes into eco//SA_1 ; empty space on disk = 615487836160 bytes ... done
+Writing 29753552 bytes into eco//SA_2 ; empty space on disk = 615458459648 bytes ... done
+Writing 717104 bytes into eco//SA_3 ; empty space on disk = 615428702208 bytes ... done
+Jul 21 05:27:56 ... loading chunks from disk, packing SA...
+Jul 21 05:27:56 ... finished generating suffix array
+Jul 21 05:27:56 ... generating Suffix Array index
+Jul 21 05:27:57 ... completed Suffix Array index
+Jul 21 05:27:57   Finished preparing junctions
+Jul 21 05:27:57 ..... finished inserting junctions into genome
+Jul 21 05:27:57 ... writing Genome to disk ...
+Writing 6029312 bytes into eco//Genome ; empty space on disk = 615523012608 bytes ... done
+SA size in bytes: 46155495
+Jul 21 05:27:57 ... writing Suffix Array to disk ...
+Writing 46155495 bytes into eco//SA ; empty space on disk = 615558307840 bytes ... done
+Jul 21 05:27:57 ... writing SAindex to disk
+Writing 8 bytes into eco//SAindex ; empty space on disk = 615518265344 bytes ... done
+Writing 88 bytes into eco//SAindex ; empty space on disk = 615518265344 bytes ... done
+Writing 6116691 bytes into eco//SAindex ; empty space on disk = 615518265344 bytes ... done
+Jul 21 05:27:57 ..... finished successfully
+DONE: Genome generation, EXITING

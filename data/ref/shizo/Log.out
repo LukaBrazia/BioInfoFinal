@@ -1,0 +1,83 @@
+STAR version=2.7.10a
+STAR compilation time,server,dir=2022-01-16T16:35:44+00:00 <place not set in Debian package>
+##### Command Line:
+/usr/lib/rna-star/bin/STAR-avx2 --runThreadN 4 --runMode genomeGenerate --genomeDir shizo --genomeFastaFiles shizo.fa --sjdbGTFfile shizo_annot.gtf --genomeSAindexNbases 10
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runThreadN                    4     ~RE-DEFINED
+runMode                       genomeGenerate        ~RE-DEFINED
+genomeDir                     shizo     ~RE-DEFINED
+genomeFastaFiles              shizo.fa        ~RE-DEFINED
+sjdbGTFfile                   shizo_annot.gtf     ~RE-DEFINED
+genomeSAindexNbases           10     ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+runThreadN                        4
+genomeDir                         shizo
+genomeFastaFiles                  shizo.fa   
+genomeSAindexNbases               10
+sjdbGTFfile                       shizo_annot.gtf
+
+-------------------------------
+##### Final effective command line:
+/usr/lib/rna-star/bin/STAR-avx2   --runMode genomeGenerate      --runThreadN 4   --genomeDir shizo   --genomeFastaFiles shizo.fa      --genomeSAindexNbases 10   --sjdbGTFfile shizo_annot.gtf
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory exists and will be overwritten: shizo/
+Jul 21 05:27:57 ... starting to generate Genome files
+shizo.fa : chr # 0  "CU329670.1" chrStart: 0
+shizo.fa : chr # 1  "CU329671.1" chrStart: 5767168
+shizo.fa : chr # 2  "CU329672.1" chrStart: 10485760
+Chromosome sequence lengths: 
+CU329670.1	5579133
+CU329671.1	4539804
+CU329672.1	2452883
+Genome sequence total length = 12571820
+Genome size with padding = 13107200
+Jul 21 05:27:57 ..... processing annotations GTF
+Processing pGe.sjdbGTFfile=shizo_annot.gtf, found:
+		7493 transcripts
+		7544 exons (non-collapsed)
+		51 collapsed junctions
+Total junctions: 51
+Jul 21 05:27:57 ..... finished GTF processing
+
+Estimated genome size with padding and SJs: total=genome+SJ=214107200 = 13107200 + 201000000
+GstrandBit=32
+Number of SA indices: 25142836
+Jul 21 05:27:57 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 4;   chunks size limit: 67047560 bytes
+Jul 21 05:27:57 ... sorting Suffix Array chunks and saving them to disk...
+Writing 66910608 bytes into shizo//SA_0 ; empty space on disk = 615514652672 bytes ... done
+Writing 66975352 bytes into shizo//SA_1 ; empty space on disk = 615447740416 bytes ... done
+Writing 63735816 bytes into shizo//SA_2 ; empty space on disk = 615380762624 bytes ... done
+Writing 3520912 bytes into shizo//SA_3 ; empty space on disk = 615317024768 bytes ... done
+Jul 21 05:28:02 ... loading chunks from disk, packing SA...
+Jul 21 05:28:02 ... finished generating suffix array
+Jul 21 05:28:02 ... generating Suffix Array index
+Jul 21 05:28:02 ... completed Suffix Array index
+Jul 21 05:28:02   Finished preparing junctions
+Jul 21 05:28:02 ..... inserting junctions into the genome indices
+Jul 21 05:28:02   Finished SA search: number of new junctions=51, old junctions=0
+Jul 21 05:28:02   Finished sorting SA indicesL nInd=20400
+Genome size with junctions=13117451  13107200   10251
+GstrandBit1=32   GstrandBit=32
+Jul 21 05:28:02   Finished inserting junction indices
+Jul 21 05:28:02   Finished SAi
+Jul 21 05:28:02 ..... finished inserting junctions into genome
+Jul 21 05:28:02 ... writing Genome to disk ...
+Writing 13117451 bytes into shizo//Genome ; empty space on disk = 615528542208 bytes ... done
+SA size in bytes: 103798352
+Jul 21 05:28:02 ... writing Suffix Array to disk ...
+Writing 103798352 bytes into shizo//SA ; empty space on disk = 615619633152 bytes ... done
+Jul 21 05:28:02 ... writing SAindex to disk
+Writing 8 bytes into shizo//SAindex ; empty space on disk = 615521947648 bytes ... done
+Writing 88 bytes into shizo//SAindex ; empty space on disk = 615521943552 bytes ... done
+Writing 6116691 bytes into shizo//SAindex ; empty space on disk = 615521943552 bytes ... done
+Jul 21 05:28:02 ..... finished successfully
+DONE: Genome generation, EXITING
